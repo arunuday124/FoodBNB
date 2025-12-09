@@ -11,7 +11,10 @@ function Footer() {
           <div className="footer-section">
             <h3 className="footer-heading">Apps</h3>
             <div className="footer-links">
-              <a href="#" className="footer-link">Food Bnb</a>
+              <h1>Made with ❤️</h1>
+              <h3>
+                <a href="#" className="footer-link">BY FOOD BNB TEAM</a>
+              </h3>
             </div>
           </div>
 

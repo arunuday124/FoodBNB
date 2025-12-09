@@ -92,12 +92,34 @@ const Top_Dishes = () => {
         "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
       dabba: false,
     },
+    {
+      id: 9,
+      title: "Vegan Pasta Delight",
+      type: "Veg • Italian",
+      chef: "Marco's Kitchen",
+      rating: 4.6,
+      distance: "2.3 km away",
+      image:
+        "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
+      dabba: false,
+    },
+    {
+      id: 10,
+      title: "Vegan Pasta Delight",
+      type: "Veg • Italian",
+      chef: "Marco's Kitchen",
+      rating: 4.6,
+      distance: "2.3 km away",
+      image:
+        "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
+      dabba: false,
+    },
   ];
   return (
     <div>
       <section className="section container">
         <span className="section-subtitle">Fresh from the Neighborhood</span>
-        <h2 className="section-title">Trending Home Kitchens</h2>
+        <h2 className="section-title">Top 10 Mom's Kitchens</h2>
 
         <div className="scroll-container">
           {dishes.map((dish) => (

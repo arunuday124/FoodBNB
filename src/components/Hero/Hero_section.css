@@ -1,0 +1,426 @@
+/* StatsSection.css */
+
+.stats-container {
+  overflow: hidden;
+  padding-bottom: 0rem;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.stats-content-wrapper {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 1.5rem 1.5rem 0 0;
+  background-color: white;
+  overflow: visible;
+  /* padding-top: 0rem; */
+}
+
+.stats-text-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.stats-title {
+  font-size: 42px;
+  width: 90%;
+  max-width: 60rem;
+  text-align: center;
+  font-weight: 600;
+  color: #dc2626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.stats-subtitle {
+  font-size: 1.1rem;
+  width: 90%;
+  max-width: 60rem;
+  text-align: center;
+  font-weight: 300;
+  color: #4b5563;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.stats-image-1 {
+  position: absolute;
+  top: 13.333333%;
+  left: 8%;
+  width: 8rem;
+  border-radius: 0.5rem;
+}
+
+.stats-image-2 {
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  width: 8rem;
+  border-radius: 0.5rem;
+}
+
+.stats-image-3 {
+  position: absolute;
+  right: 12%;
+  bottom: 5%;
+  width: 8rem;
+  border-radius: 0.5rem;
+}
+
+.stats-card {
+  z-index: 50;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: fit-content;
+  max-width: 1024px;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #fee2e2;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stats-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.stats-label {
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+
+.stats-divider {
+  height: 3rem;
+  width: 1px;
+  border-left: 1px solid #e5e7eb;
+}
+
+.stats-icon {
+  height: 2.5rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-container {
+  width: 100%;
+  padding: 80px 0 140px;
+  position: relative;
+  text-align: center;
+  background: #ffffff;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* Main Content */
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 68px;
+  font-weight: 700;
+  color: #ff4c35;
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #4f5563;
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.rotating-text {
+  font-size: 24px !important;
+  color: #000000 !important;
+  font-weight: 900;
+  min-height: 60px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Typewriter Cursor */
+.cursor {
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Stats Box */
+.stats-box {
+  margin: 60px auto;
+  padding: 25px 30px;
+  width: fit-content;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 60px;
+}
+
+.stat-item h2 {
+  font-size: 28px;
+  margin: 0;
+  color: #111;
+}
+
+.stat-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Floating Food Images */
+.food-img {
+  position: absolute;
+  width: 150px;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* buttom map section */
+/* --- How It Works Section --- */
+.top_text {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1100px;
+  margin: 60px auto 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* The horizontal line behind */
+.steps-connector-line {
+  position: absolute;
+  top: 165px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background-color: #e0e0e0;
+  z-index: 0;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding: 0 16px;
+}
+
+.step-image-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease;
+}
+
+.step-image-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.step-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 4px solid white;
+}
+
+.step-badge {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 0.9rem;
+  border: 3px solid white;
+}
+
+.badge-dark {
+  background-color: #222;
+}
+
+.badge-highlight {
+  background-color: #ff385c;
+}
+
+.step-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.step-desc {
+  font-size: 0.85rem;
+  color: #717171;
+  line-height: 1.5;
+  max-width: 220px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .steps-container {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 32px;
+  }
+
+  .steps-connector-line {
+    display: none;
+  }
+
+  .step-image-wrapper {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+
+  .step-badge {
+    bottom: -12px;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Responsive styles */
+@media (min-width: 1024px) {
+  .stats-content-wrapper {
+    height: 40rem;
+  }
+
+  .stats-text-container {
+    top: 15rem;
+  }
+
+  .stats-title {
+    font-size: 3rem;
+  }
+
+  .stats-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .stats-image-1,
+  .stats-image-2,
+  .stats-image-3 {
+    width: 15rem;
+  }
+
+  .stats-card {
+    gap: 2rem;
+    padding: 1.5rem 1.75rem;
+  }
+
+  .stats-number {
+    font-size: 2.25rem;
+  }
+
+  .stats-label {
+    font-size: 1rem;
+  }
+
+  .stats-divider {
+    height: 4rem;
+  }
+
+  .stats-icon {
+    height: 3.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .stats-title {
+    font-size: 3.75rem;
+  }
+
+  .stats-image-1 {
+    left: 15%;
+  }
+
+  .stats-image-2 {
+    right: 15%;
+  }
+
+  .stats-image-3 {
+    right: 10%;
+  }
+}

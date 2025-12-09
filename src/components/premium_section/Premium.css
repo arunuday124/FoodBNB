@@ -1,0 +1,180 @@
+.gold-container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Coins stay behind content */
+.coin-top-left,
+.coin-top-right,
+.coin-bottom-left,
+.coin-bottom-right {
+  position: absolute;
+  width: 6rem;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+/* =========================== */
+/*     CUSTOM COIN POSITIONS   */
+/* =========================== */
+
+/* TOP LEFT — moved 150px right */
+.coin-top-left {
+  top: 5.5rem;
+  left: 150px;
+  
+}
+
+/* TOP RIGHT — moved 35px left + 70px down + larger (+50px) */
+.coin-top-right {
+  top: 70px;
+  right: 95px;
+  width: 9.125rem;   /* +50px */
+  height: 9.125rem;  /* +50px */
+}
+
+/* BOTTOM LEFT — moved 80px up + 70px right + larger (+50px) */
+.coin-bottom-left {
+  bottom: 140px;
+  left: 390px;
+  width: 9.125rem;   /* +50px */
+  height: 9.125rem;  /* +50px */
+}
+
+/* BOTTOM RIGHT — net 320px up, 60px left */
+.coin-bottom-right {
+  bottom: 340px;
+  right: 120px;
+}
+
+/* =========================== */
+/*           CONTENT           */
+/* =========================== */
+
+.gold-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-bottom: -1rem;
+}
+
+.gold-logo {
+  width: 12rem;
+}
+
+.gold-premium-text {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #fbbf24;
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.4));
+  font-family: "Playfair Display", serif;
+}
+
+.gold-tagline {
+  font-size: 1.125rem;
+  text-align: center;
+  background: linear-gradient(to right, #d97706, #fcd34d, #d97706);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================== */
+/*     GOLD BENEFITS LABEL     */
+/* =========================== */
+.gold-benefits-label {
+  font-size: 30px; /* updated font size */
+  letter-spacing: 0.1em;
+}
+
+.gold-benefits-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-bottom: 4rem;  /* prevents overlap with bottom coins */
+}
+
+.gold-benefit-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: rgba(17, 24, 39, 0.5);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+}
+
+.gold-benefit-icon {
+  width: 4rem;
+}
+
+.gold-benefit-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+
+
+/* =========================== */
+/*         DESKTOP MODE        */
+/* =========================== */
+
+@media (min-width: 1024px) {
+
+  .gold-logo {
+    width: 16rem;
+  }
+
+  .gold-premium-text {
+    font-size: 3rem;
+  }
+
+  .gold-tagline {
+    font-size: 1.25rem;
+  }
+
+  .gold-benefits-label {
+    font-size: 30px; /* keep same size on desktop */
+  }
+
+  .gold-benefits-container {
+    flex-direction: row;
+  }
+
+  .gold-benefit-icon {
+    width: 5rem;
+  }
+
+  .gold-benefit-title {
+    font-size: 1.25rem;
+  }
+
+  /* Larger coins on desktop */
+  .coin-top-left,
+  .coin-bottom-right {
+    width: 15rem;
+  }
+
+  /* TOP RIGHT & BOTTOM LEFT stay +50px larger */
+  .coin-top-right,
+  .coin-bottom-left {
+    width: 11.125rem;
+    height: 11.125rem;
+  }
+}

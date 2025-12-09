@@ -8,6 +8,7 @@ import Premium from './components/premium_section/Premium.jsx'
 import App_moto from './components/App_moto/App_moto.jsx'
 
 
+
 function App() {
   
 
@@ -18,6 +19,7 @@ function App() {
        {/* <Features /> */}
        <Top_Dishes />
        <App_moto />
+       
        <Premium />
        <Footer /> 
        

@@ -1,8 +1,8 @@
 import React from "react";
 import "./Hero_section.css";
 import { useEffect, useState } from "react";
-import paymentImg from "../../assets/momo.png";
-import cook from '../../assets/burger.png';
+import paymentImg from "../../assets/payment.jpg";
+import cook from '../../assets/cooking.png';
 import food1 from '../../assets/kfc.png';
 import food2 from '../../assets/salad.jpg';
 import food3 from '../../assets/rice_bowl.jpg';
@@ -126,8 +126,8 @@ export default function OrbitingSection() {
         {/* Center Content */}
         <div className="center-content">
           <h1 className="hero-title">
-            Better food for <br />
-            <span className="highlight-text">more people</span>
+            "Better food for <br />
+            <span className="highlight-text">more people"</span>
           </h1>
 
           <div className="stats-subtitle">

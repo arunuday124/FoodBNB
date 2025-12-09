@@ -1,17 +1,48 @@
 import React from "react";
-import { useEffect, useState } from "react";
 import "./Hero_section.css";
-import paymentImg from "../../assets/payment.jpg";
-import cook from '../../assets/cooking.png';
+import { useEffect, useState } from "react";
+import paymentImg from "../../assets/momo.png";
+import cook from '../../assets/burger.png';
+import food1 from '../../assets/kfc.png';
+import food2 from '../../assets/salad.jpg';
+import food3 from '../../assets/rice_bowl.jpg';
+import food4 from '../../assets/Indian_Thali.jpg';
+import food5 from '../../assets/tomato.jpg';
+import food6 from '../../assets/soup_veggies.jpg';
+import food7 from '../../assets/Salad_2.jpg';
+import food8 from '../../assets/Onion_ring.jpg';
+import food9 from '../../assets/momo.png';
+import food10 from '../../assets/burger.png';
+import food11 from '../../assets/chole.png';
+import food12 from '../../assets/rice_bowl.jpg';
 
-const Hero_section = () => {
+const LOGOS = [
+  { name: "zapier", src: food1 },
+  { name: "hubspot", src: food2 },
+  { name: "notion", src: food3 },
+  { name: "slack", src: food4 },
+  { name: "drive", src: food5 },
+  { name: "dropbox", src: food6 },
+  { name: "figma", src: food7 },
+  { name: "linear", src: food8 },
+  { name: "zapier", src: food9 },
+  { name: "hubspot", src: food10 },
+  { name: "notion", src: food11 },
+  { name: "slack", src: food12 },
+];
+
+
+
+export default function OrbitingSection() {
+
   const [textIndex, setTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
   const rotatingTexts = [
     "Meals that feels like a hug💝",
-    "Flavours that remind you of home. Meals that make a new city feel familiar",
+    "Flavours that remind you of home.",
+    "Meals that make a new city feel familiar",
     "Eat just not to fill you stomach, but to celebrate heart!",
     "Made with Love",
     "Support a kitchen, nourish your soul",
@@ -47,123 +78,172 @@ const Hero_section = () => {
     return () => clearTimeout(timer);
   }, [displayedText, isDeleting, textIndex, rotatingTexts]);
 
+  const RADIUS = 350;
+  const DURATION = 60;
+
+  const orbitingLogos = LOGOS.map((logo, index) => {
+    const delay = -(DURATION / LOGOS.length) * index;
+    return { ...logo, delay };
+  });
+
   return (
-    <div>
-      <div className="stats-container">
-        <div className="stats-content-wrapper">
-          <div className="stats-text-container">
-            <div className="stats-title">Better food for more people</div>
+    <div className="orbit-wrapper">
+      <section className="hero-section">
+        {/* Orbit Animation Layer */}
+        <div className="orbit-container">
+          <div
+            className="guide-ring"
+            style={{ width: `${RADIUS * 2}px`, height: `${RADIUS * 2}px` }}
+          />
 
-            {/* this part for the text change  */}
-            <div className="stats-subtitle">
-              <p className="rotating-text">
-                {displayedText}
-                <span className="cursor">|</span>
-              </p>
+          {orbitingLogos.map((logo, index) => (
+            <div
+              key={index}
+              className="orbit-ring"
+              style={{
+                animation: `orbit-cw ${DURATION}s linear infinite`,
+                animationDelay: `${logo.delay}s`,
+              }}
+            >
+              <div
+                className="orbit-positioner"
+                style={{ transform: `translateX(${RADIUS}px)` }}
+              >
+                <div
+                  className="logo-tile"
+                  style={{
+                    animation: `counter-orbit-cw ${DURATION}s linear infinite`,
+                    animationDelay: `${logo.delay}s`,
+                  }}
+                >
+                  <img src={logo.src} alt={logo.name} className="logo-image" />
+                </div>
+              </div>
             </div>
-          </div>
-
-        {/* <img
-          src="https://b.zmtcdn.com/data/o2_assets/110a09a9d81f0e5305041c1b507d0f391743058910.png"
-          className="stats-image-1"
-          alt="Food 1"
-        />
-        <img
-          src="https://b.zmtcdn.com/data/o2_assets/b4f62434088b0ddfa9b370991f58ca601743060218.png"
-          className="stats-image-2"
-          alt="Food 2"
-        />
-        <img
-          src="https://b.zmtcdn.com/data/o2_assets/316495f4ba2a9c9d9aa97fed9fe61cf71743059024.png"
-          className="stats-image-3"
-          alt="Food 3"
-        /> */}
+          ))}
         </div>
-      </div>
 
+        {/* Center Content */}
+        <div className="center-content">
+          <h1 className="hero-title">
+            Better food for <br />
+            <span className="highlight-text">more people</span>
+          </h1>
 
-      {/* instruction part for using the app */}
-      <div>
-        <section
-          className="section container"
-          style={{ paddingTop: "40px", paddingBottom: "80px" , }}
-        >
-          <div className="top_text">
-            <span className="section-subtitle">SIMPLE PROCESS</span>
-            <h2 className="section-title">From Our Home to Yours</h2>
+          <div className="stats-subtitle">
+            <p className="rotating-text">
+              {displayedText}
+              <span className="cursor">|</span>
+            </p>
           </div>
 
-          <div className="steps-container">
-            <div className="steps-connector-line"></div>
 
-            {/* Step 1 */}
-            <div className="step-item">
-              <div className="step-image-wrapper">
-                <img
-                  src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=400&q=80"
-                  alt="Select Location"
-                  className="step-image"
-                />
-                <div className="step-badge badge-dark">1</div>
-              </div>
-              <h3 className="step-title">Select Location</h3>
-              <p className="step-desc">
-                Enter your pincode to find verified home kitchens in your
-                neighborhood.
-              </p>
-            </div>
+        </div>
 
-            {/* Step 2 */}
-            <div className="step-item">
-              <div className="step-image-wrapper">
-                <img
-                  src={cook}
-                  alt="Choose Kitchen"
-                  className="step-image"
-                />
-                <div className="step-badge badge-dark">2</div>
-              </div>
-              <h3 className="step-title">Choose Kitchen</h3>
-              <p className="step-desc">
-                Browse menus, read chef profiles, and choose a One-time meal or
-                Monthly Dabba.
-              </p>
-            </div>
+        <div className="fade-gradient-top" />
+        <div className="fade-gradient-bottom" />
+      </section>
 
-            {/* Step 3 */}
-            <div className="step-item">
-              <div className="step-image-wrapper">
-                <img src={paymentImg} alt="Payment" className="step-image" />
-                <div className="step-badge badge-dark">3</div>
-              </div>
-              <h3 className="step-title">Secure Checkout</h3>
-              <p className="step-desc">
-                Pay securely online. Customize your delivery schedule for
-                subscriptions.
-              </p>
-            </div>
+      {/* Next Section
+            <section className="next-section">
+                <div className="section-content">
+                    <p className="section-label">Simple Process</p>
+                    <h2 className="section-title">From Our Home to Yours</h2>
 
-            {/* Step 4 */}
-            <div className="step-item">
-              <div className="step-image-wrapper">
-                <img
-                  src="https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?auto=format&fit=crop&w=400&q=80"
-                  alt="Delivery"
-                  className="step-image"
-                />
-                <div className="step-badge badge-highlight">4</div>
-              </div>
-              <h3 className="step-title">Fast Delivery</h3>
-              <p className="step-desc">
-                Sit back! Hot, homemade food is delivered to your door via live
-                tracking.
-              </p>
+                    <div className="steps-grid">
+                        {[1, 2, 3, 4].map((step) => (
+                            <div key={step} className="step-card">
+                                <div className="step-icon">{step}</div>
+                                <h3 className="step-title">Step {step}</h3>
+                                <p className="step-desc">
+                                    Description of the step goes here. It is safe from orbiting
+                                    icons now.
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section> */}
+
+      <section
+        className="section container"
+        style={{ paddingTop: "40px", paddingBottom: "80px", }}
+      >
+        <div className="top_text">
+          <span className="section-subtitle">SIMPLE PROCESS</span>
+          <h2 className="section-title">From Our Home to Yours</h2>
+        </div>
+
+        <div className="steps-container">
+          <div className="steps-connector-line"></div>
+
+          {/* Step 1 */}
+          <div className="step-item">
+            <div className="step-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=400&q=80"
+                alt="Select Location"
+                className="step-image"
+              />
+              <div className="step-badge badge-dark">1</div>
             </div>
+            <h3 className="step-title">Select Location</h3>
+            <p className="step-desc">
+              Enter your pincode to find verified home kitchens in your
+              neighborhood.
+            </p>
           </div>
-        </section>
-      </div>
+
+          {/* Step 2 */}
+          <div className="step-item">
+            <div className="step-image-wrapper">
+              <img
+                src={cook}
+                alt="Choose Kitchen"
+                className="step-image"
+              />
+              <div className="step-badge badge-dark">2</div>
+            </div>
+            <h3 className="step-title">Choose Kitchen</h3>
+            <p className="step-desc">
+              Browse menus, read chef profiles, and choose a One-time meal or
+              Monthly Dabba.
+            </p>
+          </div>
+
+          {/* Step 3 */}
+          <div className="step-item">
+            <div className="step-image-wrapper">
+              <img src={paymentImg} alt="Payment" className="step-image" />
+              <div className="step-badge badge-dark">3</div>
+            </div>
+            <h3 className="step-title">Secure Checkout</h3>
+            <p className="step-desc">
+              Pay securely online. Customize your delivery schedule for
+              subscriptions.
+            </p>
+          </div>
+
+          {/* Step 4 */}
+          <div className="step-item">
+            <div className="step-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?auto=format&fit=crop&w=400&q=80"
+                alt="Delivery"
+                className="step-image"
+              />
+              <div className="step-badge badge-highlight">4</div>
+            </div>
+            <h3 className="step-title">Fast Delivery</h3>
+            <p className="step-desc">
+              Sit back! Hot, homemade food is delivered to your door via live
+              tracking.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
     </div>
   );
-};
-
-export default Hero_section;
+}

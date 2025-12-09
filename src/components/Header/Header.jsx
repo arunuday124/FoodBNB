@@ -23,7 +23,7 @@ const Header = () => (
 
     <div className="hero-content">
       <div className="hero-text-container">
-        <h1 className="hero-title">FoodBNB</h1>
+        <h1 className="hero-title main-title">FoodBNB</h1>
 
         <div style={{ fontWeight: "bold", fontSize: "1.5rem" }}>
           Taste the comfort of

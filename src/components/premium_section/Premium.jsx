@@ -1,9 +1,30 @@
 import React from "react";
 import "./Premium.css";
-import logo from '../../assets/foodbnb1.svg';
+import logo from "../../assets/foodbnb1.svg";
 
 const Premium = () => (
   <div className="gold-container">
+    {/* Curved Header SVG */}
+    <div className="s-page">
+      <svg
+        className="s-curve"
+        viewBox="0 0 1440 800"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="
+            M0,200
+            C360,50  720,350  1080,200
+            C1260,150 1380,180 1440,200
+            L1440,800
+            L0,800
+            Z
+          "
+          fill="black"
+        />
+      </svg>
+    </div>
+
     {/* 4 corner coins */}
     <img src="/Coins_4.png" className="coin-top-left" alt="coin" />
     <img src="/Coins_2.png" className="coin-top-right" alt="coin" />
@@ -41,12 +62,10 @@ const Premium = () => (
           />
           <div>
             <div className="gold-benefit-title">
-              {" "}
               Daily Dabba Services
               <br />
               From Verified Households
             </div>
-            <div className="gold-benefit-description"></div>
           </div>
         </div>
       </div>

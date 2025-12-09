@@ -63,6 +63,7 @@
 }
 .main-title {
   font-size: 8em !important ;
+  font-family: 'Bungee Tint', cursive !important;
 }
 
 .hero-subtitle {
@@ -129,7 +130,7 @@
   top: 1.5rem;
   left: 1.5rem;
   width: 130px;
-  height: 90px;
+  height: 100px;
   z-index: 30;
   margin-top: 20px;
 }

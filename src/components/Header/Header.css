@@ -122,9 +122,13 @@
   vertical-align: middle;
 }
 .main_icon {
-  width: 120px;
-  height: 120px;
-  
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 130px;
+  height: 90px;
+  z-index: 30;
+  margin-top: 20px;
 }
 
 /* Responsive styles */

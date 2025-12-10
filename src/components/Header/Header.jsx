@@ -11,6 +11,24 @@ const Header = () => (
   <div className="hero-container">
     {/* Logo at top left */}
     <img src={foodbnb} alt="FoodBNB Logo" className="main_icon" />
+      
+      {/* Circular Text around Logo */}
+      {/* <div className="circular-text">
+        {"FOODBNB * FOODBNB * FOODBNB * FOODBNB * "
+          .split("")
+          .map((char, index) => (
+            <span
+              key={index}
+              className="circular-char"
+              style={{
+                transform: `rotate(${index * (360 / 40)}deg) translateY(-77px)` // Fixed: semicolon and translateY
+              }}
+            >
+              {char}
+            </span>
+          ))}
+      </div> */}
+
 
     {/* Video Background */}
     <video autoPlay loop muted className="hero-video">

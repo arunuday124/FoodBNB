@@ -89,7 +89,7 @@ export default function OrbitingSection() {
   return (
     <div className="orbit-wrapper">
       <section className="hero-section">
-        {/* Orbit Animation Layer */}
+       
         <div className="orbit-container">
           <div
             className="guide-ring"

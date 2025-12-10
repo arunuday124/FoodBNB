@@ -179,3 +179,35 @@
     transform: translateY(-10px);
   }
 }
+
+
+/* 
+circulat text */
+/* .circular-text{
+  position:absolute;
+  top: 90px; 
+  left: 90px; 
+  width: 150px;
+  height: 150px;
+  animation: rotate 10s linear infinite;
+}
+
+.circular-char {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 76, 53, 0.5);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

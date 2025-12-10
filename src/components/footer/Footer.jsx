@@ -1,5 +1,7 @@
 import React from "react";
 import { Linkedin, Instagram, Youtube, Facebook } from "lucide-react";
+import app_store from "../../assets/app.avif";
+import play_store from "../../assets/play.avif";
 import "./Footer.css";
 
 function Footer() {
@@ -10,8 +12,7 @@ function Footer() {
           {/* Brand Section - replaces Apps */}
           <div className="footer-section">
             <div className="footer-brand">
-              <p className="footer-tagline">Made with ❤️</p>
-              
+              <p className="footer-tagline">Made with ❤️</p>              
               <h1 className="footer-logo"> FoodBNB</h1>
             </div>
           </div>
@@ -63,7 +64,7 @@ function Footer() {
             <h3 className="footer-heading">Social Links</h3>
             <div className="footer-social">
               <a
-                href="https://linkedin.com"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -72,7 +73,7 @@ function Footer() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="https://instagram.com"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -81,7 +82,7 @@ function Footer() {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://youtube.com"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
@@ -90,7 +91,7 @@ function Footer() {
                 <Youtube size={20} />
               </a>
               <a
-                href="https://facebook.com"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -98,7 +99,19 @@ function Footer() {
               >
                 <Facebook size={20} />
               </a>
+
             </div>
+
+            {/* all footer badges */}
+            <div className="footer-app-badge-container">
+              <a href="">
+                <img src={play_store} alt="Google Play" className="footer-app-badge" />
+              </a>
+              <a href="">
+                <img src={app_store} alt="App Store" className="footer-app-badge" />
+              </a>
+            </div>
+
           </div>
         </div>
 

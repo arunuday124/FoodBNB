@@ -115,6 +115,25 @@
   line-height: 1.6;
 }
 
+/* App Store Badges */
+.footer-app-badge-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+.footer-app-badge {
+  height: 40px;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+.footer-app-badge:hover {
+  transform: scale(1.05);
+}
+
+
 /* --------------------------------
       RESPONSIVE
 -------------------------------- */

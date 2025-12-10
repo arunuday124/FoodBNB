@@ -9,11 +9,11 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-grid">
-          {/* Brand Section - replaces Apps */}
+          {/* Brand Section */}
           <div className="footer-section">
             <div className="footer-brand">
-              <p className="footer-tagline">Made with ❤️</p>              
-              <h1 className="footer-logo"> FoodBNB</h1>
+              <h1 className="footer-logo">FoodBNB</h1>
+              <p className="footer-tagline">Made with ❤️</p>
             </div>
           </div>
 
@@ -99,19 +99,25 @@ function Footer() {
               >
                 <Facebook size={20} />
               </a>
-
             </div>
 
-            {/* all footer badges */}
+            {/* App Badges */}
             <div className="footer-app-badge-container">
               <a href="">
-                <img src={play_store} alt="Google Play" className="footer-app-badge" />
+                <img
+                  src={play_store}
+                  alt="Google Play"
+                  className="footer-app-badge"
+                />
               </a>
               <a href="">
-                <img src={app_store} alt="App Store" className="footer-app-badge" />
+                <img
+                  src={app_store}
+                  alt="App Store"
+                  className="footer-app-badge"
+                />
               </a>
             </div>
-
           </div>
         </div>
 

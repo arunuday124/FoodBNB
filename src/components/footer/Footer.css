@@ -2,16 +2,16 @@
 .footer {
   background-color: #111827;
   border-top: 1px solid #e8e8e8;
-  padding: 60px 0 50px; /* reduced vertical padding */
+  padding: 60px 0 50px;
   font-family: -apple-system, BlinkMacSystemFont,
     'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Cantarell', sans-serif;
-  text-align: center; /* center content like Zomato */
+  text-align: left; /* FIXED — left align all columns */
 }
 
 /* WIDE LEFT & RIGHT SPACE */
 .footer-container {
-  max-width: 1200px; /* smaller max-width for content in middle */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -19,9 +19,9 @@
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 0.5fr));
-  column-gap: 10px; /* tighter spacing */
-  row-gap: 1px;    /* tighter vertical spacing */
-  justify-items: center; /* center items horizontally */
+  column-gap: 10px;
+  row-gap: 1px;
+  justify-items: start; /* FIXED — left align sections */
   margin-bottom: 25px;
 }
 
@@ -29,12 +29,12 @@
 .footer-section {
   display: flex;
   flex-direction: column;
-  align-items: center; /* center content inside sections */
+  align-items: flex-start; /* FIXED — align content from left */
 }
 
 /* Brand Section */
 .footer-tagline {
-  font-size: 20px; /* slightly smaller to fit one line */
+  font-size: 20px;
   font-weight: 400;
   color: #ffffff;
   margin: 0;
@@ -62,8 +62,8 @@
 .footer-links {
   display: flex;
   flex-direction: column;
-  gap: 5px; /* slightly more space than before */
-  align-items: center; /* center links */
+  gap: 5px;
+  align-items: flex-start; /* FIXED — links aligned left */
 }
 
 .footer-link {
@@ -81,7 +81,7 @@
 .footer-social {
   display: flex;
   gap: 8px;
-  justify-content: center;
+  justify-content: center; /* stays centered */
 }
 
 .footer-social-link {
@@ -101,6 +101,11 @@
   transform: translateY(-2px);
 }
 
+/* Center ONLY the last section (Social + App badges) */
+.footer-section:last-child {
+  align-items: center;
+}
+
 /* Footer Bottom */
 .footer-bottom {
   padding-top: 15px;
@@ -111,7 +116,7 @@
   font-size: 12px;
   color: #ffffff;
   margin: 0 auto;
-  max-width: 900px; /* wrap text nicely into ~3 lines */
+  max-width: 900px;
   line-height: 1.6;
 }
 
@@ -122,6 +127,7 @@
   justify-content: center;
   margin-top: 15px;
 }
+
 .footer-app-badge {
   height: 40px;
   margin: 5px;
@@ -129,10 +135,10 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
 }
+
 .footer-app-badge:hover {
   transform: scale(1.05);
 }
-
 
 /* --------------------------------
       RESPONSIVE

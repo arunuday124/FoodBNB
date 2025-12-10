@@ -1,6 +1,7 @@
+// Premium.jsx
 import React from "react";
 import "./Premium.css";
-import logo from "../../assets/foodbnb1.svg";
+import logo from '../../assets/foodbnb1.svg';
 
 const Premium = () => (
   <div className="gold-container">
@@ -13,7 +14,7 @@ const Premium = () => (
       >
         <path
           d="
-            M0,100,
+            M0,200
             C360,50  720,350  1080,200
             C1260,150 1380,180 1440,200
             L1440,800
@@ -25,19 +26,43 @@ const Premium = () => (
       </svg>
     </div>
 
-    {/* 4 corner coins */}
+    {/* Coins */}
     <img src="/Coins_4.png" className="coin-top-left" alt="coin" />
     <img src="/Coins_2.png" className="coin-top-right" alt="coin" />
     <img src="/Coins_2.png" className="coin-bottom-left" alt="coin" />
     <img src="/Coins_1.png" className="coin-bottom-right" alt="coin" />
 
     <div className="gold-content">
-      <img src={logo} className="gold-logo" alt="Food Bnb" />
+      {/* Logo with rotating circular text */}
+      <div className="logo-wrapper">
+        <svg className="circular-text" viewBox="0 0 220 220">
+          <defs>
+            <path
+              id="circlePath"
+              d="M110,110 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"
+            />
+          </defs>
+          <text>
+            <textPath href="#circlePath" startOffset="0%">
+              FoodBNB * FoodBNB * FoodBNB * FoodBNB * 
+            </textPath>
+          </text>
+        </svg>
+
+        {/* Centered Logo */}
+        <div className="gold-logo">
+          <img
+            src={logo}
+            alt="FoodBNB Logo"
+            style={{ width: "100%", height: "100%" }}
+          />
+        </div>
+      </div>
 
       <div className="gold-premium-text">PREMIUM</div>
 
       <div className="gold-tagline">
-        AUTHENTIC HOME-COOKED MEALS.IDEAL FOR STUDENTS AND PROFESSIONALS
+        AUTHENTIC HOME-COOKED MEALS. IDEAL FOR STUDENTS AND PROFESSIONALS
       </div>
 
       <div className="gold-benefits-label">GOLD BENEFITS</div>

@@ -25,7 +25,7 @@ const Header = () => (
       <div className="hero-text-container">
         <h1 className="hero-title main-title">FoodBNB</h1>
 
-        <div style={{ fontWeight: "bold", fontSize: "1.5rem" }}>
+        <div style={{ fontWeight: "bold", fontSize: "1.5rem",fontFamily:"Platypi , serif", }}>
           Taste the comfort of
           <br />
           <div
@@ -33,6 +33,7 @@ const Header = () => (
               color: "rgb(255, 76, 53)",
               fontWeight: "bold",
               fontSize: "2.5rem",
+              fontFamily:"Platypi , serif",
             }}
           >
             Home

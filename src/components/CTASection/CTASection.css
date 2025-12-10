@@ -9,7 +9,7 @@
 .ctaX-bg-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #c90900, #ff865a );
+  background: linear-gradient(135deg, #c90900, #ff865a);
   opacity: 0.95;
 }
 
@@ -63,9 +63,15 @@
 
 /* Floating icons */
 @keyframes floatUpDown {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .ctaX-floating-icon {
@@ -102,7 +108,7 @@
 
 .ctaX-content-box {
   text-align: center;
-  max-width: 780px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -112,11 +118,11 @@
   align-items: center;
   gap: 8px;
   background: rgba(255, 255, 255, 0.15);
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 999px;
   color: white;
-  font-size: 14px;
-  margin-bottom: 30px;
+  font-size: 15px;
+  margin-bottom: 35px;
   backdrop-filter: blur(5px);
 }
 
@@ -129,25 +135,31 @@
 }
 
 @keyframes pulseBadge {
-  0% { opacity: 0.2; }
-  50% { opacity: 1; }
-  100% { opacity: 0.2; }
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
 }
 
 /* Heading */
 .ctaX-title {
-  font-size: 48px;
+  font-size: 72px;
   font-weight: 800;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   line-height: 1.2;
 }
 
 .ctaX-description {
-  font-size: 18px;
+  font-size: 22px;
   color: rgba(255, 255, 255, 0.85);
-  max-width: 520px;
-  margin: 0 auto 40px auto;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
 }
 
 /* Buttons */
@@ -163,8 +175,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 30px;
-  font-size: 18px;
+  padding: 18px 50px;
+  font-size: 20px;
   border-radius: 12px;
   cursor: pointer;
   transition: 0.3s ease;

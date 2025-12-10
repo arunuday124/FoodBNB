@@ -1,7 +1,7 @@
 // Premium.jsx
 import React from "react";
 import "./Premium.css";
-import logo from '../../assets/foodbnb1.svg';
+import logo from "../../assets/foodbnb1.svg";
 
 const Premium = () => (
   <div className="gold-container">
@@ -44,7 +44,7 @@ const Premium = () => (
           </defs>
           <text>
             <textPath href="#circlePath" startOffset="0%">
-              FoodBNB * FoodBNB * FoodBNB * FoodBNB * 
+              FoodBNB * FoodBNB * FoodBNB * FoodBNB *
             </textPath>
           </text>
         </svg>

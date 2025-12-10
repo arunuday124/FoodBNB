@@ -1,5 +1,7 @@
 /* Full page setup */
-html, body, #root {
+html,
+body,
+#root {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -11,200 +13,242 @@ html, body, #root {
 /* Container */
 .gold-container {
   position: relative;
-  min-height: 100vh;/* Full page setup */
-html, body, #root {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
+  min-height: 100vh; /* Full page setup */
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
 
-/* Container */
-.gold-container {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  background: #000000;
-}
+  /* Container */
+  .gold-container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #000000;
+  }
 
-/* Curved Header */
-.s-page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 400px;
-  z-index: 0;
-  background-color: white;
-}
+  /* Curved Header */
+  .s-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 0;
 
-.s-curve {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
 
-.s-curve path {
-  fill: black;
-}
+    /* the gap in the s curve */
+    background-color: rgb(0, 0, 0);
+  }
 
-/* Coins — individual sizes */
-.coin-top-left,
-.coin-top-right,
-.coin-bottom-left,
-.coin-bottom-right {
-  position: absolute;
-  opacity: 0.8;
-}
+  .s-curve {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
 
-.coin-top-left { top: 8rem; left: 8rem; width: 140px; height: auto; }
-.coin-top-right { top: 8rem; right: 8rem; width: 120px; height: auto; }
-.coin-bottom-left { bottom: 4rem; left: 4rem; width: 160px; height: auto; }
-.coin-bottom-right { bottom: 4rem; right: 4rem; width: 110px; height: auto; }
+  .s-curve path {
+    fill: black;
+  }
 
-@keyframes pulse {
-  0%, 100% { opacity: 0.8; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
-}
+  /* Coins — individual sizes */
+  .coin-top-left,
+  .coin-top-right,
+  .coin-bottom-left,
+  .coin-bottom-right {
+    position: absolute;
+    opacity: 0.8;
+  }
 
-/* Content below curve */
-.gold-content {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  .coin-top-left {
+    top: 8rem;
+    left: 8rem;
+    width: 140px;
+    height: auto;
+  }
+  .coin-top-right {
+    top: 8rem;
+    right: 8rem;
+    width: 120px;
+    height: auto;
+  }
+  .coin-bottom-left {
+    bottom: 4rem;
+    left: 4rem;
+    width: 160px;
+    height: auto;
+  }
+  .coin-bottom-right {
+    bottom: 4rem;
+    right: 4rem;
+    width: 110px;
+    height: auto;
+  }
 
-  padding-top: 26vh; /* UPDATED: was 42vh — moved content upward */
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
 
-  min-height: 100vh;
-  width: 100%;
-  color: white;
-}
+  /* Content below curve */
+  .gold-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
-/* Logo Wrapper */
-.logo-wrapper {
-  position: relative;
-  width: 230px;
-  height: 230px;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    padding-top: 26vh; /* UPDATED: was 42vh — moved content upward */
 
-/* Larger center logo */
-.gold-logo {
-  position: relative;
-  z-index: 2;
-  width: 110px;
-  height: 110px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+  }
 
-/* Larger spinning circular text */
-.circular-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 230px;
-  height: 230px;
-  animation: spin 10s linear infinite;
-  z-index: 1;
-}
+  /* Logo Wrapper */
+  .logo-wrapper {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.circular-text text {
-  fill: #c95000;
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
+  /* Larger center logo */
+  .gold-logo {
+    position: relative;
+    z-index: 2;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-@keyframes spin {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
+  /* Larger spinning circular text */
+  .circular-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 230px;
+    height: 230px;
+    animation: spin 10s linear infinite;
+    z-index: 1;
+    font-family: "Merriweather", serif;
+  }
 
-/* Premium Text */
-.gold-premium-text {
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  background: linear-gradient(to right, #fbbf24, #f59e0b, #d97706);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-align: center;
-}
+  .circular-text text {
+    fill: #cd1a10;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
 
-/* Tagline */
-.gold-tagline {
-  text-align: center;
-  font-size: 0.875rem;
-  margin-bottom: 2rem;
-  max-width: 42rem;
-  padding: 0 1rem;
-  color: white;
-}
+  @keyframes spin {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
 
-/* Benefits Label */
-.gold-benefits-label {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #fbbf24;
-  margin-bottom: 1.5rem;
-}
+  /* Premium Text */
+  .gold-premium-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #fbbf24, #f59e0b, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+  }
 
-/* Benefits Container — centered */
-.gold-benefits-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  max-width: 56rem;
-  width: 100%;
-  padding: 0 1rem;
-}
+  /* Tagline */
+  .gold-tagline {
+    text-align: center;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+    max-width: 42rem;
+    padding: 0 1rem;
+    color: white;
+    font-family: "Merriweather", serif;
+  }
 
-/* Larger, wider, shifted-up benefit cards */
-.gold-benefit-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 1rem;
-  background: #2a2a2a;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-  padding: 1.8rem 2.5rem;
-  border: 2px solid #fbbf24;
-  transform: translateY(-15px);
-}
+  /* Benefits Label */
+  .gold-benefits-label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #fbbf24;
+    margin-bottom: 1.5rem;
+    font-family: "Merriweather", serif;
+  }
 
-.gold-benefit-icon {
-  width: 64px;
-  height: 64px;
-  flex-shrink: 0;
-}
+  /* Benefits Container — centered */
+  .gold-benefits-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 56rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
 
-.gold-benefit-title {
-  font-weight: 600;
-  color: white;
-}
+  /* Larger, wider, shifted-up benefit cards */
+  .gold-benefit-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    background: #2a2a2a;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    padding: 1.8rem 2.5rem;
+    border: 2px solid #fbbf24;
+    transform: translateY(-15px);
+  }
 
-/* Responsive */
-@media (min-width: 768px) {
-  .gold-benefits-container { flex-direction: row; }
-}
+  .gold-benefit-icon {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+  }
+
+  .gold-benefit-title {
+    font-weight: 600;
+    color: white;
+    font-family: "Merriweather", serif;
+  }
+
+  /* Responsive */
+  @media (min-width: 768px) {
+    .gold-benefits-container {
+      flex-direction: row;
+    }
+  }
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -230,7 +274,7 @@ html, body, #root {
 }
 
 .s-curve path {
-  fill: black;
+  fill: rgb(0, 0, 0);
 }
 
 /* Coins — UPDATED: removed global width; each coin gets custom size */
@@ -243,14 +287,41 @@ html, body, #root {
 }
 
 /* INDIVIDUAL SIZES — change freely */
-.coin-top-left { top: 8rem; left: 8rem; width: 140px; height: auto; }     /* UPDATED */
-.coin-top-right { top: 8rem; right: 8rem; width: 120px; height: auto; }    /* UPDATED */
-.coin-bottom-left { bottom: 4rem; left: 4rem; width: 160px; height: auto; }/* UPDATED */
-.coin-bottom-right { bottom: 4rem; right: 4rem; width: 110px; height: auto; }/* UPDATED */
+.coin-top-left {
+  top: 8rem;
+  left: 8rem;
+  width: 140px;
+  height: auto;
+} /* UPDATED */
+.coin-top-right {
+  top: 8rem;
+  right: 8rem;
+  width: 120px;
+  height: auto;
+} /* UPDATED */
+.coin-bottom-left {
+  bottom: 4rem;
+  left: 4rem;
+  width: 160px;
+  height: auto;
+} /* UPDATED */
+.coin-bottom-right {
+  bottom: 4rem;
+  right: 4rem;
+  width: 110px;
+  height: auto;
+} /* UPDATED */
 
 @keyframes pulse {
-  0%, 100% { opacity: 0.8; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
 }
 
 /* Content Below Curve */
@@ -306,10 +377,13 @@ html, body, #root {
   letter-spacing: 2px;
 }
 
-
 @keyframes spin {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 /* Premium Text */
@@ -346,8 +420,8 @@ html, body, #root {
 .gold-benefits-container {
   display: flex;
   flex-direction: column;
-  align-items: center;        /* UPDATED: centers cards */
-  justify-content: center;    /* UPDATED */
+  align-items: center; /* UPDATED: centers cards */
+  justify-content: center; /* UPDATED */
   gap: 1.5rem;
   max-width: 56rem;
   width: 100%;
@@ -358,8 +432,8 @@ html, body, #root {
 .gold-benefit-card {
   display: flex;
   align-items: center;
-  justify-content: center;    /* UPDATED */
-  text-align: center;         /* UPDATED */
+  justify-content: center; /* UPDATED */
+  text-align: center; /* UPDATED */
   gap: 1rem;
   background: #2a2a2a;
   border-radius: 0.5rem;
@@ -382,5 +456,7 @@ html, body, #root {
 /* Responsive */
 @media (min-width: 768px) {
   /* Remove global coin override — so individual sizes still work */
-  .gold-benefits-container { flex-direction: row; }
+  .gold-benefits-container {
+    flex-direction: row;
+  }
 }

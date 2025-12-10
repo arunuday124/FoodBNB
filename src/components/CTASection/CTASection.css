@@ -124,6 +124,8 @@
   font-size: 15px;
   margin-bottom: 35px;
   backdrop-filter: blur(5px);
+  font-family: "Merriweather", serif;
+  font-size: larger;
 }
 
 .ctaX-badge-dot {
@@ -153,6 +155,7 @@
   color: white;
   margin-bottom: 30px;
   line-height: 1.2;
+  font-family: "Merriweather", serif;
 }
 
 .ctaX-description {
@@ -160,6 +163,7 @@
   color: rgba(255, 255, 255, 0.85);
   max-width: 700px;
   margin: 0 auto 60px auto;
+  font-family: "Merriweather", serif;
 }
 
 /* Buttons */
@@ -168,6 +172,7 @@
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+  
 }
 
 .ctaX-btn-primary,
@@ -226,10 +231,12 @@
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 4px;
+  font-family: "Merriweather", serif;
 }
 
 .ctaX-info-value {
   font-size: 18px;
   color: white;
   font-weight: 600;
+  font-family: "Merriweather", serif;
 }

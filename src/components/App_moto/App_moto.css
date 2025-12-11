@@ -17,19 +17,21 @@
   font-size: 1.5rem;
   color: #ff4c24;
   font-weight: 600;
-  ;
+  font-family: "Geom", sans-serif;
 }
 
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 24px;
   font-weight: 700;
+  font-family: "Geom", sans-serif;
 }
 
 .why-description {
   color: #717171;
   font-size: 1.1rem;
   line-height: 1.6;
+  font-family: "Geom", sans-serif;
 }
 
 /* Grid */
@@ -72,6 +74,7 @@
 .why-title {
   font-size: 1.2rem;
   font-weight: bold;
+  font-family: "Geom", sans-serif;
 }
 
 .why-text {
@@ -79,4 +82,5 @@
   color: #717171;
   line-height: 1.6;
   max-width: 350px;
+  font-family: "Geom", sans-serif;
 }

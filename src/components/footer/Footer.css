@@ -39,6 +39,7 @@
   color: #ffffff;
   margin: 0;
   line-height: 1.3;
+  font-family: "Geom", sans-serif;
 }
 
 .footer-logo {
@@ -46,6 +47,7 @@
   font-weight: 700;
   color: #ef4f5f;
   margin: 5px 0 0;
+  font-family: "Geom", sans-serif;
 }
 
 /* Headings */
@@ -56,6 +58,7 @@
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: "Geom", sans-serif;
 }
 
 /* Links */
@@ -64,6 +67,7 @@
   flex-direction: column;
   gap: 5px;
   align-items: flex-start; /* FIXED — links aligned left */
+  font-family: "Geom", sans-serif;
 }
 
 .footer-link {
@@ -71,6 +75,7 @@
   color: #ffffff;
   text-decoration: none;
   transition: color 0.2s ease;
+  font-family: "Geom", sans-serif;
 }
 
 .footer-link:hover {
@@ -118,6 +123,7 @@
   margin: 0 auto;
   max-width: 900px;
   line-height: 1.6;
+  font-family: "Geom", sans-serif;
 }
 
 /* App Store Badges */

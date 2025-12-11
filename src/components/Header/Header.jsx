@@ -43,7 +43,7 @@ const Header = () => (
       <div className="hero-text-container">
         <h1 className="hero-title main-title">FoodBNB</h1>
 
-        <div style={{ fontWeight: "bold", fontSize: "1.5rem",fontfamily: "Merriweather, serif" }}>
+        <div style={{ fontWeight: "bold", fontSize: "1.5rem",fontfamily: "Geom, sans-seri" }}>
           Taste the comfort of
           <br />
           <div
@@ -51,7 +51,7 @@ const Header = () => (
               color: "rgb(255, 76, 53)",
               fontWeight: "bold",
               fontSize: "2.5rem",
-              fontfamily: "Merriweather, serif",
+              fontfamily: "Geom, sans-seri",
             }}
           >
             Home

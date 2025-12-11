@@ -8,6 +8,12 @@ const Info = () => {
 
     {/* info part */}
     <div className="heroX-wrapper">
+
+      {/* doted background texture */}
+      <div className="heroX-dotted-bg">
+        <div className="dotted-grid"></div>
+      </div>
+
       
       {/* Dynamic Background */}
       <div className="heroX-gradient-bg"></div>

@@ -79,7 +79,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-family: 'platypi', serif;
+  font-family: "Geom", sans-serif;
 }
 
 /* Title */
@@ -88,7 +88,7 @@
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 22px;
-  
+  font-family: "Geom", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -110,6 +110,7 @@
   margin: 0 auto 40px auto;
   color: rgba(255, 255, 255, 0.85);
   font-weight: 300;
+  font-family: "Geom", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -181,9 +182,29 @@
 }
 
 .heroX-wave-fill {
-  fill: white;
+  fill: rgb(255, 255, 255);
 }
 
+/* doted background texture */ */
+.heroX-dotted-bg {
+  position: relative;
+  height: 200%;
+  width: 100%;
+  background-color: white;
+}
+
+.dotted-grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 100%;
+  background-image: radial-gradient(#ffffff 1.5px, transparent 4.5px);
+  background-size: 16px 16px;
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 70%, transparent 100%);
+}
 
 
 /* about part css */
@@ -294,13 +315,13 @@
 .storyX-badge-subtext {
   font-size: 12px;
   color: #777;
-  font-family: "Merriweather", serif;
+  font-family: "Geom", sans-serif;
 }
 
 .storyX-badge-title {
   font-weight: 700;
   color: #333;
-  font-family: "Merriweather", serif;
+  font-family: "Geom", sans-serif;
 }
 
 /* BADGE ANIMATION */
@@ -320,7 +341,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 10px;
-  font-family: "Merriweather", serif;
+  font-family: "Geom", sans-serif;
   font-size: larger;
 }
 
@@ -330,7 +351,7 @@
   margin-bottom: 24px;
   color: #2d2d2d;
   line-height: 1.2;
-  font-family: "Merriweather", serif;
+  font-family: "Geom", sans-serif;
 }
 
 .storyX-highlight {
@@ -342,7 +363,7 @@
   font-size: 18px;
   margin-bottom: 24px;
   line-height: 1.6;
-  font-family: "Merriweather", serif;
+  font-family: "Geom", sans-serif;
 }
 
 .storyX-bold {
@@ -381,11 +402,11 @@
 .storyX-feature-title {
   font-weight: 700;
   color: #222;
-  font-family: "Merriweather", serif;
+  font-family: "Geom", sans-serif;
 }
 
 .storyX-feature-desc {
   font-size: 14px;
   color: #777;
-  font-family: "Merriweather", serif;
+  font-family: "Geom", sans-serif;
 }

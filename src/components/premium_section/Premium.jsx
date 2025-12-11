@@ -5,6 +5,12 @@ import logo from "../../assets/foodbnb1.svg";
 
 const Premium = () => (
   <div className="gold-container">
+
+    {/* doted background texture */}
+      <div className="ctaX-dotted-bg">
+        <div className="ctaX-dotted-grid"></div>
+      </div>
+
     {/* Curved Header SVG */}
     <div className="s-page">
       <svg

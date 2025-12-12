@@ -4,17 +4,17 @@ import { useEffect, useState } from "react";
 import paymentImg from "../../assets/payment.jpg";
 import cook from '../../assets/cooking.png';
 import food1 from '../../assets/kfc.png';
-import food2 from '../../assets/salad.jpg';
-import food3 from '../../assets/rice_bowl.jpg';
-import food4 from '../../assets/Indian_Thali.jpg';
+import food2 from '../../assets/pasta.jpg';
+import food3 from '../../assets/rice_bowl_new.png';
+import food4 from '../../assets/naan.png';
 import food5 from '../../assets/tomato.jpg';
 import food6 from '../../assets/soup_veggies.jpg';
-import food7 from '../../assets/Salad_2.jpg';
+import food7 from '../../assets/ots.png';
 import food8 from '../../assets/Onion_ring.jpg';
 import food9 from '../../assets/momo.png';
 import food10 from '../../assets/burger.png';
 import food11 from '../../assets/chole.png';
-import food12 from '../../assets/rice_bowl.jpg';
+import food12 from '../../assets/fish.png';
 
 const LOGOS = [
   { name: "zapier", src: food1 },

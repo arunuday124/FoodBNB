@@ -212,11 +212,12 @@
 .storyX-section {
   padding: 96px 0;
   background: white;
+
 }
 
 /* CONTAINER */
 .storyX-container {
-  max-width: 1250px;
+  max-width: 1650px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -332,7 +333,7 @@
 
 /* RIGHT SIDE CONTENT */
 .storyX-right {
-  width: 100%;
+  width: 90%;
 }
 
 .storyX-subtitle {
@@ -342,11 +343,11 @@
   text-transform: uppercase;
   margin-bottom: 10px;
   font-family: "Geom", sans-serif;
-  font-size: larger;
+  font-size: 18px;
 }
 
 .storyX-heading {
-  font-size: 36px;
+  font-size: 39px;
   font-weight: 800;
   margin-bottom: 24px;
   color: #2d2d2d;
@@ -360,7 +361,7 @@
 
 .storyX-text {
   color: #666;
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 24px;
   line-height: 1.6;
   font-family: "Geom", sans-serif;

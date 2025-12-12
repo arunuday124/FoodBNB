@@ -10,7 +10,7 @@ import "./Header.css";
 const Header = () => (
   <div className="hero-container">
     {/* Logo at top left */}
-    <img src={foodbnb} alt="FoodBNB Logo" className="main_icon" />
+    {/* <img src={foodbnb} alt="FoodBNB Logo" className="main_icon" /> */}
       
       {/* Circular Text around Logo */}
       {/* <div className="circular-text">

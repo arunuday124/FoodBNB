@@ -166,7 +166,7 @@ export default function OrbitingSection() {
             </section> */}
 
       <section
-        className="section container"
+        className="section_container"
         style={{ paddingTop: "40px", paddingBottom: "80px", }}
       >
         <div className="top_text">

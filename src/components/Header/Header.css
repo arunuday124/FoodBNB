@@ -61,9 +61,12 @@
   text-align: center;
   font-weight: 600;
 }
+
 .main-title {
   font-size: 8em !important ;
   font-family: 'Bungee Tint', cursive !important;
+  color: #ff4c35 !important;
+  text-shadow: 0 0 10px rgba(255, 76, 53, 0.7);
 }
 
 .hero-subtitle {
@@ -126,12 +129,12 @@
 }
 .main_icon {
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  width: 130px;
-  height: 100px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 20px));
+  width: 160px;
+  height: 160px;
   z-index: 30;
-  margin-top: 20px;
 }
 
 /* Responsive styles */

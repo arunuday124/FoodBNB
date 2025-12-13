@@ -1,8 +1,9 @@
 /* Wrapper */
 .ctaX-section {
   position: relative;
-  padding: 240px 0;
+  padding: 150px 0;
   overflow: hidden;
+
 }
 
 /* Background gradient */
@@ -113,7 +114,7 @@
 }
 
 /* Badge */
-.ctaX-badge {
+/* .ctaX-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -134,7 +135,14 @@
   background: white;
   border-radius: 50%;
   animation: pulseBadge 1.5s infinite;
-}
+} */
+/* .ctaX-phone-image-container{
+ 
+  display: flex;
+  justify-content: left;
+  margin-top: 40px;
+  
+} */
 
 @keyframes pulseBadge {
   0% {
@@ -173,6 +181,7 @@
   justify-content: center;
   flex-wrap: wrap;
   
+  
 }
 
 .ctaX-btn-primary,
@@ -185,6 +194,8 @@
   border-radius: 12px;
   cursor: pointer;
   transition: 0.3s ease;
+  width: 240px;
+  justify-content: center;
 }
 
 /* Primary */
@@ -281,4 +292,62 @@
   background-size: 20px 20px;
   background-position: center center;
 }
+/* ============================= */
+/* Layout: text left + image right */
+/* ============================= */
 
+.ctaX-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  z-index: 5;
+    
+}
+
+/* Left content stays left aligned */
+.ctaX-content-box {
+  text-align: left;
+  flex: 1;
+  
+}
+
+/* Right phone image */
+.ctaX-phone-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Make image responsive */
+.ctaX-phone-img {
+  max-width: 100%;
+  height: auto;
+}
+.ctaX-phone-img :hover{
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* ==================== */
+/* Responsive Breakpoint */
+/* ==================== */
+
+@media (max-width: 992px) {
+  .ctaX-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ctaX-content-box {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .ctaX-phone-image-wrapper {
+    justify-content: center;
+  }
+}

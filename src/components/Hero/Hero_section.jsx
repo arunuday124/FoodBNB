@@ -136,8 +136,6 @@ export default function OrbitingSection() {
               <span className="cursor">|</span>
             </p>
           </div>
-
-
         </div>
 
         <div className="fade-gradient-top" />

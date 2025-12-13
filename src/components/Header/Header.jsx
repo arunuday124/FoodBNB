@@ -43,19 +43,9 @@ const Header = () => (
       <div className="hero-text-container">
         <h1 className="hero-title main-title">FoodBNB</h1>
 
-        <div style={{ fontWeight: "bold", fontSize: "1.5rem",fontfamily: "Geom, sans-seri" }}>
-          Taste the comfort of
-          <br />
-          <div
-            style={{
-              color: "rgb(255, 76, 53)",
-              fontWeight: "bold",
-              fontSize: "2.5rem",
-              fontfamily: "Geom, sans-seri",
-            }}
-          >
-            Home
-          </div>
+        <div className="hero-subtitle-text">
+          Taste the <span className=" hero-subtitle-highlight  ">comfort</span> of Home
+          
         </div>
       </div>
 

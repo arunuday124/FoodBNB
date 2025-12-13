@@ -100,6 +100,7 @@
 .heroX-title-gradient {
   background: linear-gradient(to right, #ffdcd1, #ffffff);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -111,6 +112,13 @@
   color: rgba(255, 255, 255, 0.85);
   font-weight: 300;
   font-family: "Geom", sans-serif;
+}
+
+/* Mobile devices (≤480px) - Add extra bottom gap */
+@media (max-width: 480px) {
+  .heroX-description {
+    margin-bottom: 130px;
+  }
 }
 
 @media (min-width: 768px) {

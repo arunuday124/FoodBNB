@@ -465,12 +465,15 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   align-items: center;
   z-index: 0;
   pointer-events: none;
+  --orbit-radius: min(350px, 50vw, 50vh);
 }
 
 .guide-ring {
   position: absolute;
   border: 1px dashed rgba(209, 213, 219, 0.5);
   border-radius: 50%;
+  width: calc(var(--orbit-radius) * 2) !important;
+  height: calc(var(--orbit-radius) * 2) !important;
 }
 
 .orbit-ring {
@@ -486,7 +489,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   top: 50%;
   left: 50%;
   transform-origin: center;
-  translate: -50% -50%;
+  transform: translate(-50%, -50%) translateX(var(--orbit-radius));
 }
 
 .logo-tile {
@@ -517,18 +520,19 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .center-content {
   position: relative;
   z-index: 10;
-  max-width: 896px;
-  padding: 0 1rem;
+  max-width: calc(var(--orbit-radius) * 2.56); /* 896px / 350px = 2.56 */
+  padding: 0 clamp(0.5rem, calc(var(--orbit-radius) * 0.0286), 1rem); /* 10px / 350px = 0.0286 */
   text-align: center;
+  --orbit-radius: min(350px, 50vw, 50vh);
 }
 
 .hero-title {
-  font-size: 3.75rem !important;
+  font-size: clamp(1.125rem, calc(var(--orbit-radius) * 0.1714), 3.75rem) !important; /* 60px / 350px = 0.1714 */
   font-weight: 700;
   color: #0f172a;
   letter-spacing: -0.025em;
-  line-height: 1;
-  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  margin-bottom: clamp(0.75rem, calc(var(--orbit-radius) * 0.0429), 1.5rem); /* 24px / 350px = 0.0429 */
   font-family: "Geom", sans-serif;
 }
 
@@ -536,12 +540,11 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   color: #ef4444;
 }
 .rotating-text{
-  font-size: 1.25rem !important;
+  font-size: clamp(0.625rem, calc(var(--orbit-radius) * 0.0571), 1.25rem) !important; /* 20px / 350px = 0.0571 */
   font-weight: 700;
   color: #0000009d !important;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(0.75rem, calc(var(--orbit-radius) * 0.0429), 1.5rem); /* 24px / 350px = 0.0429 */
   font-family: "Geom", sans-serif;
-  /* text-align: center; */
 }
 .stats-subtitle{
   justify-content: center;
@@ -687,11 +690,61 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 /* Responsive */
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: 3.5rem;
+@media (max-width: 768px) {
+  .orbit-container {
+    --orbit-radius: min(250px, 40vw, 40vh);
   }
 
+  .center-content {
+    --orbit-radius: min(250px, 40vw, 40vh);
+  }
+
+  .logo-tile {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .orbit-container {
+    --orbit-radius: min(150px, 30vw, 30vh);
+  }
+
+  .center-content {
+    --orbit-radius: min(150px, 30vw, 30vh);
+  }
+
+  .logo-tile {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* iPhone SE and very small screens */
+@media (max-width: 375px) {
+  .orbit-container {
+    --orbit-radius: min(100px, 25vw, 25vh);
+  }
+
+  .center-content {
+    --orbit-radius: min(100px, 25vw, 25vh);
+  }
+
+  .logo-tile {
+    width: 55px;
+    height: 55px;
+  }
+
+  .hero-title {
+    font-size: clamp(0.875rem, calc(var(--orbit-radius) * 0.1714), 2rem) !important;
+  }
+
+  .rotating-text {
+    font-size: clamp(0.5rem, calc(var(--orbit-radius) * 0.0571), 0.875rem) !important;
+  }
+}
+
+@media (min-width: 768px) {
   .steps-grid {
     grid-template-columns: repeat(4, 1fr);
   }

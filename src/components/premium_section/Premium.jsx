@@ -50,7 +50,7 @@ const Premium = () => (
           </defs>
           <text>
             <textPath href="#circlePath" startOffset="0%">
-              FoodBNB * FoodBNB * FoodBNB * FoodBNB *
+              FoodBNB * FoodBNB * FoodBNB * FoodBNB * FoodBNB * FoodBNB * FoodBNB * FoodBNB *
             </textPath>
           </text>
         </svg>
